@@ -4,7 +4,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class zy1 {
+public class ChapterApplication {
     @RequestMapping(value = "/hello")
     public String hello() {
         return "hello spring boot!!!!!";
