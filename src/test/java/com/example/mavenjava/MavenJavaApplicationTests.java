@@ -9,12 +9,12 @@ import com.example.mavenjava.mybatiscatalog.CommentMapper;
 import com.example.mavenjava.mybatiscatalog.jpa.Discuss;
 import com.example.mavenjava.mybatiscatalog.jpa.DiscussRepository;
 import com.example.mavenjava.profileconfig.DBConnector;
-import org.hibernate.criterion.Example;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.ApplicationContext;
+import org.springframework.data.domain.Example;
 import org.springframework.data.domain.ExampleMatcher;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -75,7 +75,7 @@ public class MavenJavaApplicationTests {
 
         Discuss discuss = new Discuss();
         discuss.setAuthor("张三");
-        Example<Discuss> example = Example.of(discuss);
+        Example example = Example.of(discuss);
         List<Discuss> list1 =repository.findAll(example);
         System.out.println(list1);
 

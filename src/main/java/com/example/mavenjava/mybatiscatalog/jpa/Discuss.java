@@ -1,5 +1,6 @@
 package com.example.mavenjava.mybatiscatalog.jpa;
 import javax.persistence.*;
+
 @Entity(name = "t_comment")
 public class Discuss {
     @Id
