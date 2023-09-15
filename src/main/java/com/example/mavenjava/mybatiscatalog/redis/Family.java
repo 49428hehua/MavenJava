@@ -8,20 +8,9 @@ public class Family {
     @Indexed
     private String username;
 
-    public Family() {
-    }
-
     public Family(String type, String username) {
         this.type = type;
         this.username = username;
-    }
-
-    @Override
-    public String toString() {
-        return "Family{" +
-                "type='" + type + '\'' +
-                ", username='" + username + '\'' +
-                '}';
     }
 
     public String getType() {
@@ -38,5 +27,13 @@ public class Family {
 
     public void setUsername(String username) {
         this.username = username;
+    }
+
+    @Override
+    public String toString() {
+        return "Family{" +
+                "type='" + type + '\'' +
+                ", username='" + username + '\'' +
+                '}';
     }
 }

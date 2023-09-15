@@ -8,7 +8,7 @@ import java.util.List;
 
 @RedisHash("persons")
 
-public class Person {
+public class Personredis {
     @Id
     private String id;
     @Indexed
@@ -16,29 +16,7 @@ public class Person {
     @Indexed
     private String lastname;
     private Address address;
-    private List<Family>familyList;
-
-    public Person(String id, String firstname, String lastname, Address address, List<Family> familyList) {
-        this.id = id;
-        this.firstname = firstname;
-        this.lastname = lastname;
-        this.address = address;
-        this.familyList = familyList;
-    }
-
-    public Person() {
-    }
-
-    @Override
-    public String toString() {
-        return "Person{" +
-                "id='" + id + '\'' +
-                ", firstname='" + firstname + '\'' +
-                ", lastname='" + lastname + '\'' +
-                ", address=" + address +
-                ", familyList=" + familyList +
-                '}';
-    }
+    private List<Family> familyList;
 
     public String getId() {
         return id;
@@ -78,5 +56,19 @@ public class Person {
 
     public void setFamilyList(List<Family> familyList) {
         this.familyList = familyList;
+    }
+
+    public Personredis() {
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "id='" + id + '\'' +
+                ", firstname='" + firstname + '\'' +
+                ", lastname='" + lastname + '\'' +
+                ", address=" + address +
+                ", familyList=" + familyList +
+                '}';
     }
 }
